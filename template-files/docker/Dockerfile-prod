@@ -1,0 +1,15 @@
+FROM node:{{nodeJsVersion}}-alpine AS builder
+WORKDIR /app
+
+COPY package.json .
+COPY package-lock.json .
+
+RUN npm ci --silent
+
+COPY . .
+
+RUN GENERATE_SOURCEMAP=false npm run build
+
+FROM caddy:2.4.0-alpine
+COPY --from=builder /app/build /srv
+COPY caddy/Caddyfile /etc/caddy/Caddyfile

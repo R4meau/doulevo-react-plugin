@@ -1,0 +1,29 @@
+# pull official base image
+FROM node:{{nodeJsVersion}}
+
+# set working directory
+WORKDIR /app
+
+# Pick the right folder depending on the language selected by the user
+RUN if [ "{{projectLanguage}}" = "TypeScript" ]; then \
+    rm -rf ./react-js; \
+    cp -rf ./react-ts/* ./; \
+    rm -rf react-ts; \
+else \
+    rm -rf ./react-ts; \
+    cp -rf ./react-js/* ./; \
+    rm -rf react-js; \
+fi
+
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
+
+# add app
+COPY . ./
+
+EXPOSE 3000
+
+# start app
+CMD ["npm", "start"]
