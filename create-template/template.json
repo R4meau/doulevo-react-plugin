@@ -1,19 +1,10 @@
 {
   "expand":[
      "package.json",
-     "README.md"
+     "README.md",
+     "caddy/Caddyfile"
   ],
   "questions":[
-     {
-        "type":"list",
-        "name":"projectLanguage",
-        "default":"TypeScript",
-        "choices":[
-           "TypeScript",
-           "JavaScript"
-        ],
-        "message":"Pick your language."
-     },
      {
         "type":"input",
         "name":"packageVersion",
@@ -31,7 +22,7 @@
       "type": "input",
       "name": "projectDomainName",
       "default": "localhost",
-      "message": "What will be your project domain name once you deploy? Leave blank to skip for now."
+      "message": "What will be your project domain name once you deploy? Leave blank to skip for now. i.e.: mydomain.com"
      }
   ]
 }
