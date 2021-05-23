@@ -1,0 +1,37 @@
+{
+  "expand":[
+     "package.json",
+     "README.md"
+  ],
+  "questions":[
+     {
+        "type":"list",
+        "name":"projectLanguage",
+        "default":"TypeScript",
+        "choices":[
+           "TypeScript",
+           "JavaScript"
+        ],
+        "message":"Pick your language."
+     },
+     {
+        "type":"input",
+        "name":"packageVersion",
+        "default":"0.0.1",
+        "message":"Enter the initial version number for your new project."
+     },
+     {
+      "type": "list",
+      "name": "nodeJsVersion",
+      "default": "14",
+      "choices": ["12", "14", "15", "16"],
+      "message": "Enter the version of Node.js to use."
+     },
+     {
+      "type": "input",
+      "name": "projectDomainName",
+      "default": "localhost",
+      "message": "What will be your project domain name once you deploy? Leave blank to skip for now."
+     }
+  ]
+}
