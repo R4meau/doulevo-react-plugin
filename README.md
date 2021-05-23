@@ -47,5 +47,5 @@ You have to do this for both the `-ts` and the `-js` versions.
 ## Functionalities
 
 - [ ] Asks user to pick whether they want to use JS or TS
-- [ ] Asks use for the initial version number of their project (for their `package.json`)
+- [ ] Asks user for the initial version number of their project (for their `package.json`)
 - [ ] Provides a base documentation in the README.md file
