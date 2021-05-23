@@ -1,0 +1,10 @@
+{{projectDomainName}} {
+  log {
+    output file /var/log/caddy/access.log
+  }
+
+  encode gzip
+  root * /srv
+  try_files {path} /index.html
+  file_server
+}
