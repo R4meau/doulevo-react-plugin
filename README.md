@@ -18,10 +18,24 @@ Replace `<my-project>` with your project/directory name.
 
 Answer the questionnaire based on your preferences.
 
-Then cd into your new directory. You will notice your new React project and your `doulevo.json` configuration file:
+Then cd into your new directory. You will notice your new React project, including your `doulevo.json` configuration file:
 ```
 cd <my-project>
 ls -la
+```
+
+```
+.
+..
+caddy
+doulevo.json
+.git
+package.json
+package-lock.json
+public
+README.md
+src
+tsconfig.json
 ```
 
 ### Running in development
@@ -68,15 +82,16 @@ mywebsite.com {
 
 TODO: Add Doulevo deployment command here
 
-## About the templates
+## About the ~~templates~~ template
 
-This plugin comes with two templates:
+This plugin comes with ~~two templates~~ one template:
 
 - react-ts
-- react-js
+- ~~react-js~~
 
 The templates are based off of the default CRA JS/TS generated starter files. Refer to the `react-scripts` dependency version in `package.json` to know which version of CRA was used last.
 
+NOTE: The goal was to initially give the option of picking either JavaScript or TypeScript but Doulevo is not ready for this yet. So this functionality is scheduled for later.
 
 ### For contributors to this plugin
 
@@ -84,12 +99,12 @@ To update CRA, [follow this guide](https://create-react-app.dev/docs/updating-to
 
 To update React, [follow this one](https://stackoverflow.com/a/49829751/927559). Then send us a pull request.
 
-You have to do this for both the `-ts` and the `-js` versions.
+~~You have to do this for both the `-ts` and the `-js` versions.~~
 
 ## Functionalities
 
 - [ ] Asks user to pick whether they want to use JS or TS
-- [ ] Asks user for the initial version number of their project (for their `package.json`)
-- [ ] Provides a base documentation in the README.md file
+- [x] Asks user for the initial version number of their project (for their `package.json`)
+- [x] Provides a base documentation in the README.md file
 - [ ] Asks user whether they want to use yarn or npm
 - [ ] Production: asks user for a domain name to generate the right Caddyfile for serving the static files with SSL encryotion
